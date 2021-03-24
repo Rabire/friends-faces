@@ -4,7 +4,11 @@ function Button({ skip, nextFriend }) {
   return (
     <span class="cta" onClick={skip}>
       <span>{nextFriend.toUpperCase()}</span>
-      <span style={{ alignItems: "center" }}>
+      <span
+        style={{
+          paddingTop: 5,
+        }}
+      >
         <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1">
           <g
             id="arrow"
