@@ -4,7 +4,7 @@ import colors from "./colors";
 
 import Button from "./Button/Button";
 
-const friends = ["noam", "yann", "leo", "clem", "simon"].sort(
+const friends = ["noam", "yann", "leo", "clem", "simon", "pol"].sort(
   () => Math.random() - 0.5
 );
 
