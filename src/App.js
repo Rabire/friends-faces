@@ -1,22 +1,22 @@
+import { useCallback, useState } from "react";
 import "./App.css";
 import pastelColors from "./colors";
-
-// import img from "./assets/yann-1.png";
-// import img3 from "./assets/yann-3.png";
-// import img4 from "./assets/yann-4.png";
 
 const randomColor =
   pastelColors[Math.floor(Math.random() * pastelColors.length)];
 
-const friends = ["noam", "yann"];
-const randomFriend = friends[Math.floor(Math.random() * friends.length)];
+const friends = ["noam", "yann", "leo"].sort(() => Math.random() - 0.5);
 
 function App() {
+  const [currentFriend, setCurrentFriend] = useState(friends[0]);
+
   const iconsPath = require.context("./assets/", true);
 
-  const img1 = iconsPath("./" + randomFriend + "-1.png").default;
-  const img3 = iconsPath("./" + randomFriend + "-3.png").default;
-  const img4 = iconsPath("./" + randomFriend + "-4.png").default;
+  const img1 = iconsPath("./" + currentFriend + "-1.png").default;
+  const img3 = iconsPath("./" + currentFriend + "-3.png").default;
+  const img4 = iconsPath("./" + currentFriend + "-4.png").default;
+
+  const nextFriend = useCallback(() => setCurrentFriend(friends[1]), []);
 
   return (
     <div
@@ -25,7 +25,9 @@ function App() {
         backgroundColor: randomColor,
         backgroundImage: `url(${img1}), url(${img3}), url(${img4})`,
       }}
-    ></div>
+    >
+      <h1 onClick={nextFriend}>NEXT</h1>
+    </div>
   );
 }
 
