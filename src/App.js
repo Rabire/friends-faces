@@ -1,29 +1,12 @@
 import { useCallback, useState } from "react";
 import "./App.css";
-import colors from "./colors";
+import { shuffleArray } from "./utils";
+import data from "./config.json";
 
 import Button from "./Button/Button";
 
-const friends = [
-  "noam",
-  "yann",
-  "leo",
-  "clem",
-  "simon",
-  "pol",
-  "ninon",
-  "rabire",
-  "ven",
-  "victor",
-  "hamzat",
-  "christ",
-  "zaki",
-  "leandre",
-  "tristan",
-  "neil",
-  "matys",
-  "raph",
-].sort(() => Math.random() - 0.5);
+const friends = shuffleArray(data.friends);
+const colors = shuffleArray(data.colors);
 
 function App() {
   const [currentFriendIndex, setCurrentFriendIndex] = useState(0);
