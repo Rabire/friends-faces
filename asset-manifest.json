@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.7ae36c73.chunk.css",
-    "main.js": "/static/js/main.2c5e4898.chunk.js",
-    "main.js.map": "/static/js/main.2c5e4898.chunk.js.map",
+    "main.js": "/static/js/main.f05ef556.chunk.js",
+    "main.js.map": "/static/js/main.f05ef556.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.b2f9016a.js",
     "runtime-main.js.map": "/static/js/runtime-main.b2f9016a.js.map",
     "static/js/2.434a2658.chunk.js": "/static/js/2.434a2658.chunk.js",
@@ -12,6 +12,9 @@
     "static/js/2.434a2658.chunk.js.LICENSE.txt": "/static/js/2.434a2658.chunk.js.LICENSE.txt",
     "static/media/aline-3.png": "/static/media/aline-3.11e62ef2.png",
     "static/media/aline-4.png": "/static/media/aline-4.5bbd0a13.png",
+    "static/media/cedric-1.png": "/static/media/cedric-1.a683ca64.png",
+    "static/media/cedric-3.png": "/static/media/cedric-3.3f474a8e.png",
+    "static/media/cedric-4.png": "/static/media/cedric-4.0bc9b9bf.png",
     "static/media/christ-1.png": "/static/media/christ-1.c6816884.png",
     "static/media/christ-3.png": "/static/media/christ-3.70b1dc43.png",
     "static/media/christ-4.png": "/static/media/christ-4.93f9be5e.png",
@@ -64,6 +67,6 @@
     "static/js/runtime-main.b2f9016a.js",
     "static/js/2.434a2658.chunk.js",
     "static/css/main.7ae36c73.chunk.css",
-    "static/js/main.2c5e4898.chunk.js"
+    "static/js/main.f05ef556.chunk.js"
   ]
 }
