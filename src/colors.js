@@ -29,6 +29,6 @@ const pastelColors = [
   "#ff9899",
   "#ffb7ce",
   "#ca9bf7",
-];
+].sort(() => Math.random() - 0.5);
 
 export default pastelColors;

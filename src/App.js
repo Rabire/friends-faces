@@ -1,14 +1,23 @@
 import { useCallback, useState } from "react";
 import "./App.css";
-import pastelColors from "./colors";
-
-const randomColor =
-  pastelColors[Math.floor(Math.random() * pastelColors.length)];
+import colors from "./colors";
 
 const friends = ["noam", "yann", "leo"].sort(() => Math.random() - 0.5);
 
+console.log({ friends });
+
 function App() {
-  const [currentFriend, setCurrentFriend] = useState(friends[0]);
+  const [currentFriendIndex, setCurrentFriendIndex] = useState(0);
+  const [currentColorIndex, setCurrentColorIndex] = useState(0);
+
+  const currentColor = colors[currentColorIndex];
+  const nextColorIndex =
+    currentColorIndex === colors.length - 1 ? 0 : currentColorIndex + 1;
+
+  const currentFriend = friends[currentFriendIndex];
+  const nextFriendIndex =
+    currentFriendIndex === friends.length - 1 ? 0 : currentFriendIndex + 1;
+  const nextFriend = friends[nextFriendIndex];
 
   const iconsPath = require.context("./assets/", true);
 
@@ -16,17 +25,22 @@ function App() {
   const img3 = iconsPath("./" + currentFriend + "-3.png").default;
   const img4 = iconsPath("./" + currentFriend + "-4.png").default;
 
-  const nextFriend = useCallback(() => setCurrentFriend(friends[1]), []);
+  const skip = useCallback(() => {
+    setCurrentFriendIndex(nextFriendIndex);
+    setCurrentColorIndex(nextColorIndex);
+  }, [nextFriendIndex, nextColorIndex]);
 
   return (
     <div
       id="snow"
       style={{
-        backgroundColor: randomColor,
+        backgroundColor: currentColor,
         backgroundImage: `url(${img1}), url(${img3}), url(${img4})`,
       }}
     >
-      <h1 onClick={nextFriend}>NEXT</h1>
+      <button className="big-button" onClick={skip}>
+        {nextFriend}
+      </button>
     </div>
   );
 }
