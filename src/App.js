@@ -20,6 +20,7 @@ const friends = [
   "zaki",
   "leandre",
   "tristan",
+  "neil",
 ].sort(() => Math.random() - 0.5);
 
 function App() {
