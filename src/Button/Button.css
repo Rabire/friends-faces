@@ -17,6 +17,7 @@ body {
 }
 
 .cta {
+  cursor: pointer;
   display: flex;
   padding: 10px 45px;
   text-decoration: none;
