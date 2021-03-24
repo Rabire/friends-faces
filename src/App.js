@@ -4,9 +4,16 @@ import colors from "./colors";
 
 import Button from "./Button/Button";
 
-const friends = ["noam", "yann", "leo", "clem", "simon", "pol"].sort(
-  () => Math.random() - 0.5
-);
+const friends = [
+  "noam",
+  "yann",
+  "leo",
+  "clem",
+  "simon",
+  "pol",
+  "ninon",
+  "rabire",
+].sort(() => Math.random() - 0.5);
 
 function App() {
   const [currentFriendIndex, setCurrentFriendIndex] = useState(0);
